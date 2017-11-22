@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+
+	<title>Instrument</title>
+	
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+  rel="stylesheet" />
+         
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',
+  filename='style1.css') }}" />
+         
+         
+         
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand"><img src="#" styl="width: 150px; height: 50px; padding: 0 0 20px 0; margin: 10px">
+		
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+		<ul class="nav navbar-nav navbar-left">
+			<li><a href="{{ url_for('index') }}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+			<li><a href="{{ url_for('products') }}"><span class="glyphicon glyphicon-user"></span> Products</a></li>
+			
+			<li><a href="{{ url_for('contact') }}"><span class="glyphicon glyphicon-list-alt"></span> Contact</a></li>
+		</ul>
+                 <ul class="nav navbar-nav navbar-right">
+			<li>{% if not session.logged_in %}
+                           <a href="{{ url_for('login') }}">log in</a>
+                         {% else %}
+                           <a href="{{ url_for('logout') }}">log out</a>
+                         {% endif %}</li>
+			<li><a href="{{ url_for('sign_up') }}"><span class="glyphicon glyphicon-user"></span> Sign up</a></li>
+                          
+                              
+		</ul>
+
+		</div>
+	</div>
+</nav>
+         	{% block body %}
+                 <div class="container">
+		<section class="section1">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<img src="static/images/home.png" class="img-responsive center-block">				
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                           {% for message in get_flashed_messages() %}
+                                           <div style="background: #CEE5F5; padding: 0.5em;border: 1px solid #AACBE2">{{ message }}</div>
+                                           {% endfor %}
+					<h2 class="text-right">Piano</h2>					
+					<h3 class="text-uppercase text-right margin-top-30">king of instruments</h3>
+					<p class="text-right margin-top-30">The piano is an acoustic, stringed musical instrument invented in Italy by Bartolomeo Cristofori around the year 1700 (the exact year is uncertain), in which the strings are struck by hammers. It is played using a keyboard,[1] which is a row of keys (small levers) that the performer presses down or strikes with the fingers and thumbs of both hands to cause the hammers to strike the strings.</p>
+					<a href="#" class="pull-right btn-gradient margin-top-30 text-uppercase">Lorem ip</a>
+				</div>
+			</div>	
+		</section>
+		<img src="static/images/border.png" class="templatemo-border">
+		
+		
+		
+		
+		<section class="section2">
+			<h2 class="text-uppercase text-center">About</h2>
+			<div class="img-container">
+				<img src="static/images/about-frame.png" img-responsive">
+				<img src="static/images/about.jpg" class="about-img img-responsive">
+			</div>			
+			<p class="margin-top-50 text-center">The piano was founded on earlier technological innovations in keyboard instruments. Pipe organs have been used since Antiquity, and as such, the development of pipe organs enabled instrument builders to learn about creating keyboard mechanisms for sounding pitches. The first string instruments with struck strings were the hammered dulcimers,[5] which were used since the Middle Ages in Europe. During the Middle Ages, there were several attempts at creating stringed keyboard instruments with struck strings.[6] By the 17th century, the mechanisms of keyboard instruments such as the clavichord and the harpsichord were well developed. In a clavichord, the strings are struck by tangents, while in a harpsichord, they are mechanically plucked by quills when the performer depresses the key. Centuries of work on the mechanism of the harpsichord in particular had shown instrument builders the most effective ways to construct the case, soundboard, bridge, and mechanical action for a keyboard intended to sound strings.<a href="#">Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit. Aenean quis eros quis lacus interdum accumsan id ut ante. Duis gravida massa sit amet malesuada tincidunt.</p>
+		{% endblock %}
+
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+         {% extends "index.html" %}
+         {% block body %}
+             <img src="/static/images/border.png" class="templatemo-border" style="padding: 80px 0 0 0">
+            <div>
+            <div class="container" style="padding: 100px">
+                <div class="row">
+                    <div class="col-md-6 log">
+                             <h1>Login</h3>
+                             
+                             <h4 style="padding: 20px 0">Welcome, please enter the following to continue.</p>
+                             {% if error %}<p class="error" style="background: #F0D6D6; padding: 10px; margin: 10px 0"><strong>Error:</strong> {{ error }}{% endif %}
+  <form action="{{ url_for('login') }}" method=post>
+                             <form action="{{ url_for('index') }}" method=post class=add-entry>
+                                 <h5>User Name:</h5>	
+                                 <input type="text" placeholder="Username" name="username">
+                                 <h5>Password:</h5>
+                                 <input type="password" placeholder="password" name="password"><br>					
+                                 <input type="submit" value="Login" class="btn-success" style="margin: 20px 0">
+
+                             </form>
+                            <a href="#">Forgot Password ?</a>
+                    </div>
+                    <div class="col-md-6 login-right">
+                            <h1>New Registration</h3>
+                            
+                            <h4>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</h4>
+                            <a href="/sign_up" class="button">Create An Account</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+         
+         {% endblock %}

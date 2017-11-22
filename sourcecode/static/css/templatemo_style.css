@@ -1,0 +1,138 @@
+
+*, body { font-family: 'Open Sans', sans-serif; }
+
+
+a, a:hover, a:focus, a:active { text-decoration: none; }
+
+body { overflow-x: hidden; }
+body, h1, p, ul { margin: 0; }
+
+h2 { font-size: 60px; }
+
+ul { padding: 0; }
+
+.margin-top-30 { margin-top: 30px; }
+.margin-top-50 { margin-top: 50px; }
+
+img.templatemo-border {	width: 100%; }
+
+.blue {	color: #0585DE; }
+
+.templatemo-site-name {
+  cursor: pointer;
+  font-size: 50px;
+  font-weight: 700;
+	margin-top: 40px;
+}
+
+.section1 {
+	padding-bottom: 80px;
+	padding-top: 130px;
+}
+.section2 {
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+.btn-gradient {
+  background: #616161;
+  background-image: -webkit-linear-gradient(top, #616161, #383838);
+  background-image: -moz-linear-gradient(top, #616161, #383838);
+  background-image: -ms-linear-gradient(top, #616161, #383838);
+  background-image: -o-linear-gradient(top, #616161, #383838);
+  background-image: linear-gradient(to bottom, #616161, #383838);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  /*font-family: Arial;*/
+  color: green;
+  /*font-size: 20px;*/
+  padding: 6px 20px 6px 20px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+.btn-gradient:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+/* 4. Albums Styles
+------------------------------------*/
+.templatemo-album {
+  cursor: pointer;
+  position: relative;
+  margin-top: 50px;
+}
+.templatemo-album-images {
+  float: left;
+  width: 400px;
+}
+.templatemo-album-description {
+  float: left;
+  width: 100px;
+}
+.templatemo-album:hover .templatemo-album-description { color: #27a7ff; }
+.templatemo-album:hover .templatemo-album-img {
+  top: 63px;
+  left: 77px;
+  width: 180px;
+}
+.templatemo-album-img {  
+  position: absolute;
+  top: 102px;
+  left: 115px;
+  z-index: 100;
+  width: 100px;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+}
+.templatemo-album-img-bg {
+  position: absolute;
+  top: 6px;
+  left: 21px;
+  z-index: -100;
+}
+.templatemo-album-img-frame {
+  width: 400px;
+  height: auto;
+}
+.templatemo-album-description {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+}
+.templatemo-album-artist { margin-top: 60px; }
+.templatemo-album-date { margin-top: 130px; }
+
+/* 5. About Styles
+------------------------------*/
+.img-container {
+  position: relative;
+  margin: 0 0 0 280px;
+  
+  width: 100%;
+}
+.about-img {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -100;
+}
+
+
+.form-control {	border-radius: 0; }
+#map-canvas { height: 350px; }
+
+
+
+
+
